@@ -1,9 +1,13 @@
 package com.javaacademy;
 
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
+
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class JournalRecord {
-    private double garbageWeight;
-    private Bottle bottle;
-    private Cartoon cartoon;
+    double garbageWeight;
+    Bottle bottle;
+    Cartoon cartoon;
 
     public JournalRecord(Bottle bottle) {
         this.bottle = bottle;
