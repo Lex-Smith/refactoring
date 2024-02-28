@@ -1,25 +1,15 @@
 package com.javaacademy;
 
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.experimental.FieldDefaults;
 
+@Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class JournalRecord {
     double garbageWeight;
     Bottle bottle;
     Cartoon cartoon;
-
-    public JournalRecord(Bottle bottle) {
-        this.bottle = bottle;
-    }
-
-    public JournalRecord(double garbageWeight) {
-        this.garbageWeight = garbageWeight;
-    }
-
-    public JournalRecord(Cartoon cartoon) {
-        this.cartoon = cartoon;
-    }
 
     @Override
     public String toString() {
